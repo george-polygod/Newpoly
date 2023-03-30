@@ -10,32 +10,7 @@
     <link href="./files/css/docs.css" rel="stylesheet" />
     <link href="./files/css/jquery.ui.css" rel="stylesheet" />
     <link href="./files/css/jquery.ui.html4.css" rel="stylesheet" />
-    <script
-      type="text/javascript"
-      src="./files/extras/jquery.min.1.7.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./files/extras/jquery-ui-1.8.20.custom.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./files/extras/jquery.mousewheel.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./files/extras/modernizr.2.5.3.min.js"
-    ></script>
-    <script type="text/javascript" src="./files/lib/hash.js"></script>
-    <script type="text/javascript">
-      // Prevent screen from rotating
-      window.addEventListener("orientationchange", function () {
-        if (window.orientation == 90 || window.orientation == -90) {
-          document.body.style.transform = "rotate(0deg)";
-          alert("Please rotate your device back to portrait mode.");
-        }
-      });
-    </script>
+ 
   </head>
   <style id="deskimage">
     body {
@@ -59,6 +34,33 @@
       </div>
     </div>
 
+    <script
+    type="text/javascript"
+    src="./files/extras/jquery.min.1.7.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./files/extras/jquery-ui-1.8.20.custom.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./files/extras/jquery.mousewheel.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./files/extras/modernizr.2.5.3.min.js"
+  ></script>
+  <script type="text/javascript" src="./files/lib/hash.js"></script>
+  <script type="text/javascript">
+    // Prevent screen from rotating
+    window.addEventListener("orientationchange", function () {
+      if (window.orientation == 90 || window.orientation == -90) {
+        document.body.style.transform = "rotate(0deg)";
+        alert("Please rotate your device back to portrait mode.");
+      }
+    });
+  </script>
+  
     <script type="text/javascript">
       function loadApp() {
         var flipbook = $(".sample-docs");
