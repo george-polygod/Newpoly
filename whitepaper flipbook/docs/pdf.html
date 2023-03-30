@@ -271,13 +271,13 @@
 
       $("#canvas").css({ visibility: "hidden" });
 
-      // yepnope({
-      //   test: Modernizr.csstransforms,
-      //   yep: ["./files/lib/turn.min.js", "./files/jquery.ui.css"],
-      //   nope: ["./files/lib/turn.html4.min.js", "./files/css/jquery.ui.html4.css"],
-      //   both: ["./files/css/docs.css", "./files/js/docs.js"],
-      //   complete: loadApp,
-      // });
+      yepnope({
+        test: Modernizr.csstransforms,
+        yep: ["./files/lib/turn.min.js", "./files/jquery.ui.css"],
+        nope: ["./files/lib/turn.html4.min.js", "./files/css/jquery.ui.html4.css"],
+        both: ["./files/css/docs.css", "./files/js/docs.js"],
+        complete: loadApp,
+      });
     </script>
     <div class="header">
       <a href="/">
