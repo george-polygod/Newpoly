@@ -34,7 +34,29 @@ $(function(){
     }
 
 //  3D Parallax Slider -------------------------------------------------------------------------------------------------
+var touchStartX = 0;
+var touchEndX = 0;
 
+document.addEventListener("touchstart", function(event) {
+  touchStartX = event.touches[0].clientX;
+});
+
+document.addEventListener("touchend", function(event) {
+  touchEndX = event.changedTouches[0].clientX;
+  handleSwipeGesture();
+});
+
+function handleSwipeGesture() {
+  var swipeThreshold = 50; // Minimum distance in pixels for a swipe gesture
+
+  if (touchEndX - touchStartX > swipeThreshold) {
+    // Swipe right
+    document.getElementById("prevo").click();
+  } else if (touchStartX - touchEndX > swipeThreshold) {
+    // Swipe left
+    document.getElementById("nexto").click();
+  }
+}
     $("[data-background]").each(function() {
         $(this).css("background-image", "url(" + $(this).attr("data-background") + ")");
     });
@@ -49,7 +71,6 @@ $(function(){
         }
         $(".slider-pager").append(htmlCode);
     });
-
 
     $(".slide:not(.first)").each(function() {        
         $(this).attr("data-position-x", randomNumber("position", sceneMaxSize) );
