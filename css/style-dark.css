@@ -1335,6 +1335,103 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	}
 }
 
+/* parallax horizantal image */
+.banner-container {
+	position: fixed;
+	overflow: hidden;
+	margin-top: 0%;
+	left: 0px;
+    height: 338px;
+    width: 8000px;
+	z-index: 9999;
+	pointer-events: none;
+	background-image: url(/img/dark/projects/prjct-1/Page-parallax.png);
+	background-repeat: repeat-x;
+	background-size: 4143px 263px;
+	background-position: 0px 50% ;
+	animation: move-banner 120s linear 0s infinite reverse none running;
+	max-height: 590px;
+	transform: rotate(-2deg);
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	width: 100%;
+	flex-direction: column;
+	}
+
+  
+  @keyframes move-banner {
+	0% {
+	  background-position: 50% 50%;
+	}
+	100% {
+	  background-position: 150% 50%;
+	}
+}
+
+.banner-containerh {
+	position: fixed;
+	overflow: hidden;
+	margin-top: -20%;
+	left: 0px;
+    height: 338px;
+    width: 8000px;
+	z-index: 9999;
+	pointer-events: none;
+	background-image: url(/img/dark/projects/prjct-1/Page-parallax.png);
+	background-repeat: repeat-x;
+	background-size: 4143px 263px;
+	animation: move-banner 120s linear 0s infinite normal none running;
+	max-height: 590px;
+	transform: rotate(-2deg);
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	width: 100%;
+	flex-direction: column;
+	}
+
+  
+  @keyframes move-banner-h {
+	0% {
+	  background-position: 10% 50%;
+	}
+	100% {
+	  background-position: 110% 50%;
+	}
+}
+  
+/*   
+  parallax horizantal image
+.banner-containerh {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	pointer-events: none;
+  }
+  
+  .banner-containerh img {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	max-width: none;
+	max-height: none; */
+	/* animation: move-banner 20s linear infinite alternate; */
+	/* animation: move-banner 10s linear 0s infinite normal none running;
+  }
+  
+  @keyframes move-banner {
+	0% {
+	  transform: translate(-50%, -50%) rotate(-25deg) translateX(150%);
+	}
+	100% {
+	  transform: translate(-50%, -50%) rotate(-25deg) translateX(-150%);
+	}
+  } */
 /* Scroll Hint */
 
 .mry-scroll-hint-frame {
