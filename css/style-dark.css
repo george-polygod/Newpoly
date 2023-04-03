@@ -1336,13 +1336,18 @@ html.is-animating .transition-fade .mry-loading-curtain {
 }
 
 /* parallax horizantal image */
+
+.parent-container {
+	position: relative;
+	height: 90vh; /* Adjust this value according to your needs */
+	overflow: hidden;
+  }
+  
 .banner-container {
 	position: fixed;
-	overflow: hidden;
 	margin-top: 0%;
-	left: 0px;
+	left: 0;
     height: 338px;
-    width: 8000px;
 	z-index: 9999;
 	pointer-events: none;
 	background-image: url(/img/dark/projects/prjct-1/Page-parallax.png);
@@ -1350,13 +1355,8 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	background-size: 4143px 263px;
 	background-position: 0px 50% ;
 	animation: move-banner 120s linear 0s infinite reverse none running;
-	max-height: 590px;
 	transform: rotate(-2deg);
-	display: flex;
-	-webkit-box-pack: justify;
-	justify-content: space-between;
-	width: 100%;
-	flex-direction: column;
+	width: 99.7%;
 	}
 
   
@@ -1371,11 +1371,9 @@ html.is-animating .transition-fade .mry-loading-curtain {
 
 .banner-containerh {
 	position: fixed;
-	overflow: hidden;
-	margin-top: -20%;
-	left: 0px;
+	margin-top: 15%;
+	left: 0;
     height: 338px;
-    width: 8000px;
 	z-index: 9999;
 	pointer-events: none;
 	background-image: url(/img/dark/projects/prjct-1/Page-parallax.png);
@@ -1384,11 +1382,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	animation: move-banner 120s linear 0s infinite normal none running;
 	max-height: 590px;
 	transform: rotate(-2deg);
-	display: flex;
-	-webkit-box-pack: justify;
-	justify-content: space-between;
-	width: 100%;
-	flex-direction: column;
+	width: 99.7%;
 	}
 
   
