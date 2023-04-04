@@ -1339,7 +1339,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 
 .parent-container {
 	position: relative;
-	height: 90vh; /* Adjust this value according to your needs */
+	height: 70vh; /* Adjust this value according to your needs */
 	overflow: hidden;
   }
   
@@ -1511,7 +1511,18 @@ html.is-animating .transition-fade .mry-loading-curtain {
 .mry-arrows .mry-label {
 	color: rgba(215, 215, 215, 0.8);
 }
-
+ 
+.four-line-paragraph {
+	font-size: 16px; /* Adjust font size to fit the content */
+	line-height: 0.5 ; /* Adjust line-height to control the spacing between lines */
+	max-height: 6em; /* 4 lines * line-height */
+	overflow: hidden; /* Hide any content that exceeds the max-height */
+	text-overflow: ellipsis; /* Add an ellipsis to indicate that the text has been truncated */
+	display: -webkit-box; /* Use the old flexbox model for applying the line-clamp property */
+	-webkit-line-clamp: 4; /* Limit the paragraph to 4 lines */
+	-webkit-box-orient: vertical; /* Set the orientation of the box to vertical */
+  }
+  
 /* Video */
 
 .mry-about-video .mry-video-cover-frame {
