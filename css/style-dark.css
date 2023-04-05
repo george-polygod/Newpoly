@@ -2546,7 +2546,7 @@ blockquote:after {
 	animation: checkmark-circle 0.6s ease-in-out backwards
 }
 
-@media only screen and (max-device-width: 430px), (max-width: 430px) {
+@media only screen and (max-device-width: 500px), (max-width: 500px) {
 	/* styles for devices with a screen width of 390 pixels or smaller, 
 	   including the iPhone 12 Pro, and browser windows with a width of 390 pixels or smaller */
 		
@@ -2587,4 +2587,14 @@ blockquote:after {
 		  z-index: 1000 !important;
 
 		}
+		#godsa {
+margin-top: -10% !important;
+width: 99.5% !important;
+  
+		}
+
+		#godsb {
+			margin-top: 60% !important;
+			width: 99.5% !important;
+					}
 	  }
