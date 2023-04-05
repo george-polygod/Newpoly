@@ -2597,4 +2597,7 @@ width: 99.5% !important;
 			margin-top: 55% !important;
 			width: 99.5% !important;
 					}
+					#download-btn {
+						margin-left: 4%;
+					}
 	  }
