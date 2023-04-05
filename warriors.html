@@ -1,381 +1,370 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- color of address bar in mobile browser -->
-    <link rel="shortcut icon" href="/img/dark/projects/prjct-1/favicon.ico" type="image/x-icon" />
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/plugins/bootstrap.min.css" />
-    <!-- font awesome css -->
-    <link rel="stylesheet" href="css/plugins/font-awesome.min.css" />
-    <!-- swiper css -->
-    <link rel="stylesheet" href="css/plugins/swiper.min.css" />
-    <!-- fancybox css -->
-    <link rel="stylesheet" href="css/plugins/fancybox.min.css" />
-    <!-- mapbox css -->
-    <link href="css/plugins/mapbox-style.css" rel="stylesheet" />
 
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style-dark.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- color of address bar in mobile browser -->
+  <link rel="shortcut icon" href="/img/dark/projects/prjct-1/favicon.ico" type="image/x-icon" />
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/plugins/bootstrap.min.css" />
+  <!-- font awesome css -->
+  <link rel="stylesheet" href="css/plugins/font-awesome.min.css" />
+  <!-- swiper css -->
+  <link rel="stylesheet" href="css/plugins/swiper.min.css" />
+  <!-- fancybox css -->
+  <link rel="stylesheet" href="css/plugins/fancybox.min.css" />
+  <!-- mapbox css -->
+  <link href="css/plugins/mapbox-style.css" rel="stylesheet" />
 
-    <title>Warriros</title>
- 
-  </head>
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style-dark.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <body>
-    <style> .scrollbar-track .scrollbar-thumb {
+  <title>Warriros</title>
+
+</head>
+
+<body>
+  <style>
+    .scrollbar-track .scrollbar-thumb {
       background-color: goldenrod !important;
       opacity: 1 !important;
       width: 5px !important;
     }
-    
-    </style>
+  </style>
 
-    <style>
+  <style>
+    .mry-subtitle:before {
+      content: '';
+      width: 30px;
+      height: 3px;
+      background-color: goldenrod;
+      border-radius: 3px;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 4px);
+    }
+  </style>
 
-.mry-subtitle:before {
-	content: '';
-	width: 30px;
-	height: 3px;
-	background-color: goldenrod;
-	border-radius: 3px;
-	position: absolute;
-	left: 0;
-	top: calc(50% - 4px);
-}
+  <div class="mry-app">
+    <!-- preloader -->
+    <div class="mry-preloader mry-active">
+      <div class="mry-preloader-content">
+        <img class="mry-logo mry-mb-20" src="/img/dark/polygod-logo.png" alt="Polygod" />
+        <div class="mry-loader-bar">
+          <div class="mry-loader"></div>
+        </div>
+        <div class="mry-label">Please wait</div>
+      </div>
+    </div>
+    <!-- preloader end -->
 
-    </style>
-
-    <div class="mry-app">
-      <!-- preloader -->
-      <div class="mry-preloader mry-active">
-        <div class="mry-preloader-content">
-          <img
-            class="mry-logo mry-mb-20"
-            src="/img/dark/polygod-logo.png"
-            alt="Polygod"
-          />
-          <div class="mry-loader-bar">
-            <div class="mry-loader"></div>
-          </div>
-          <div class="mry-label">Please wait</div>
+    <!-- cursor -->
+    <div class="mry-magic-cursor">
+      <div class="mry-ball">
+        <div class="mry-loader">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background: new 0 0 50 50"
+            xml:space="preserve">
+            <path
+              d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+              <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25"
+                to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+            </path>
+          </svg>
         </div>
       </div>
-      <!-- preloader end -->
+    </div>
+    <!-- cursor end -->
 
-      <!-- cursor -->
-      <div class="mry-magic-cursor">
-        <div class="mry-ball">
-          <div class="mry-loader">
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              width="40px"
-              height="40px"
-              viewBox="0 0 50 50"
-              style="enable-background: new 0 0 50 50"
-              xml:space="preserve"
-            >
-              <path
-                d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z"
-              >
-                <animateTransform
-                  attributeType="xml"
-                  attributeName="transform"
-                  type="rotate"
-                  from="0 25 25"
-                  to="360 25 25"
-                  dur="0.6s"
-                  repeatCount="indefinite"
-                />
-              </path>
-            </svg>
+    <!-- top panel -->
+    <div class="mry-top-panel">
+      <div class="mry-logo-frame">
+        <a href="index.html" class="mry-default-link mry-anima-link">
+          <img class="mry-logo" src="/img/dark/polygod-logo.png" alt="Polygod" />
+        </a>
+      </div>
+      <div class="mry-menu-button-frame">
+        <div class="mry-label">Menu</div>
+
+        <div class="mry-menu-btn mry-magnetic-link">
+          <div class="mry-burger mry-magnetic-object">
+            <span></span>
           </div>
         </div>
       </div>
-      <!-- cursor end -->
+    </div>
+    <!-- top panel end -->
 
-      <!-- top panel -->
-      <div class="mry-top-panel">
-        <div class="mry-logo-frame">
-          <a href="index.html" class="mry-default-link mry-anima-link">
-            <img
-              class="mry-logo"
-              src="/img/dark/polygod-logo.png"
-              alt="Polygod"
-            />
-          </a>
-        </div>
-        <div class="mry-menu-button-frame">
-          <div class="mry-label">Menu</div>
+    <!-- menu -->
+    <div class="mry-menu">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-4">
+            <nav id="mry-dynamic-menu">
+              <ul>
+                <li class="menu-item current-menu-item">
+                  <a href="index.html" class="mry-default-link">Home</a>
 
-          <div class="mry-menu-btn mry-magnetic-link">
-            <div class="mry-burger mry-magnetic-object">
-              <span></span>
-            </div>
+
+                <li class="menu-item menu-item-has-children">
+                  <a href="#." class="mry-default-link">Works</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item">
+                      <a href="portfolio-grid-1.html" class="mry-anima-link mry-default-link">Portfolio grid 1</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="portfolio-grid-2.html" class="mry-anima-link mry-default-link">Portfolio grid 2</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="portfolio-box-1.html" class="mry-anima-link mry-default-link">Portfolio boxed 1</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="portfolio-box-2.html" class="mry-anima-link mry-default-link">Portfolio boxed 2</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="project.html" class="mry-anima-link mry-default-link">Single project</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-item">
+                  <a href="about.html" class="mry-anima-link mry-default-link">About</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="contact.html" class="mry-anima-link mry-default-link">Contact</a>
+                </li>
+
+                </li>
+                <li class="menu-item">
+                  <a href="https://drive.google.com/file/d/1DmiNjZxdVoCc_fy65k_Vz_oOttzBsxPW/view"
+                    class="mry-anima-link mry-default-link">Whitepaper</a>
+                </li>
+              </ul>
+              </li>
+              </ul>
+            </nav>
           </div>
-        </div>
-      </div>
-      <!-- top panel end -->
-
-      <!-- menu -->
-      <div class="mry-menu">
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-md-4">
-              <nav id="mry-dynamic-menu">
-                <ul>
-                  <li
-                    class="menu-item current-menu-item"
-                  >
-                    <a href="index.html" class="mry-default-link">Home</a>
-
-
-                  <li class="menu-item menu-item-has-children">
-                    <a href="#." class="mry-default-link">Works</a>
-                    <ul class="sub-menu">
-                      <li class="menu-item">
-                        <a
-                          href="portfolio-grid-1.html"
-                          class="mry-anima-link mry-default-link"
-                          >Portfolio grid 1</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="portfolio-grid-2.html"
-                          class="mry-anima-link mry-default-link"
-                          >Portfolio grid 2</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="portfolio-box-1.html"
-                          class="mry-anima-link mry-default-link"
-                          >Portfolio boxed 1</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="portfolio-box-2.html"
-                          class="mry-anima-link mry-default-link"
-                          >Portfolio boxed 2</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="project.html"
-                          class="mry-anima-link mry-default-link"
-                          >Single project</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="menu-item">
-                    <a href="about.html" class="mry-anima-link mry-default-link"
-                      >About</a
-                    >
-                  </li>
-
-                  <li class="menu-item">
-                    <a
-                      href="contact.html"
-                      class="mry-anima-link mry-default-link"
-                      >Contact</a
-                    >
-                  </li>
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="https://drive.google.com/file/d/1DmiNjZxdVoCc_fy65k_Vz_oOttzBsxPW/view"
-                          class="mry-anima-link mry-default-link"
-                          >Whitepaper</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="col-md-4">
-              <div class="mry-info-box-frame">
-                <div class="mry-info-box">
-                  <div class="mry-mb-20">
-                    <div class="mry-label mry-mb-5">Location:</div>
-                    <div class="mry-text">Valhalla</div>
-                  </div>
-                  <div class="mry-mb-20">
-                    <div class="mry-label mry-mb-5">Email:</div>
-                    <a class="mry-text" href="mailto:support@polygod.io"
-                      >support@polygod.io</a
-                    >
-                  </div>
-                  <div class="mry-mb-20">
-                    <div class="mry-label mry-mb-5">Phone:</div>
-                    <a class="mry-text" href="#.">Runes tell, no phone rings.</a>
-                  </div>
+          <div class="col-md-4">
+            <div class="mry-info-box-frame">
+              <div class="mry-info-box">
+                <div class="mry-mb-20">
+                  <div class="mry-label mry-mb-5">Location:</div>
+                  <div class="mry-text">Valhalla</div>
+                </div>
+                <div class="mry-mb-20">
+                  <div class="mry-label mry-mb-5">Email:</div>
+                  <a class="mry-text" href="mailto:support@polygod.io">support@polygod.io</a>
+                </div>
+                <div class="mry-mb-20">
+                  <div class="mry-label mry-mb-5">Phone:</div>
+                  <a class="mry-text" href="#.">Runes tell, no phone rings.</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- menu end -->
+    </div>
+    <!-- menu end -->
 
 
-      <div class="transition-fade">
-        <div class="mry-content-frame" id="scroll">
-          <canvas class="mry-dots" style="display: none"></canvas>
+    <div class="transition-fade">
+      <div class="mry-content-frame" id="scroll">
+        <canvas class="mry-dots" style="display: none"></canvas>
 
-          <div class="mry-head-bg">
-            <img src="/img/dark/projects/prjct-1/battle 3.png" alt="background" />
-            <div class="mry-bg-overlay"></div>
-          </div>
+        <div class="mry-head-bg">
+          <img src="/img/dark/projects/prjct-1/battle 3.png" alt="background" />
+          <div class="mry-bg-overlay"></div>
+        </div>
 
-          <div class="mry-banner mry-p-140-0">
-            <div class="container">
-              <div class="mry-main-title mry-title-center">
-                <div class="mry-subtitle mry-mb-20 mry-fo">Characters</div>
-                <h1 class="mry-mb-20 mry-fo">
-                  Explore <br /><span class="mry-border-text"
-                    >Our Characters</span
-                  ><span class="mry-animation-el"></span>
-                </h1>
-                <div class="mry-text mry-fo">
-                  Fierce Gods Battle, Fate Unfolds
-                </div>
-                <div class="mry-scroll-hint-frame">
-                  <a
-                    class="mry-scroll-hint mry-smooth-scroll mry-magnetic-link mry-fo"
-                    href="#mry-anchor"
-                  >
-                    <span class="mry-magnetic-object"></span>
-                  </a>
-                  <div class="mry-label mry-fo">Scroll Down</div>
-                </div>
+        <div class="mry-banner mry-p-140-0">
+          <div class="container">
+            <div class="mry-main-title mry-title-center">
+              <div class="mry-subtitle mry-mb-20 mry-fo">Characters</div>
+              <h1 class="mry-mb-20 mry-fo">
+                Explore <br /><span class="mry-border-text">Our Characters</span><span class="mry-animation-el"></span>
+              </h1>
+              <div class="mry-text mry-fo">
+                Fierce Gods Battle, Fate Unfolds
+              </div>
+              <div class="mry-scroll-hint-frame">
+                <a class="mry-scroll-hint mry-smooth-scroll mry-magnetic-link mry-fo" href="#mry-anchor">
+                  <span class="mry-magnetic-object"></span>
+                </a>
+                <div class="mry-label mry-fo">Scroll Down</div>
               </div>
             </div>
           </div>
-
-
-
-
-
-          
-          <!-- portfolio -->
-
-          <div class="mry-portfolio mry-p-100-100">
-            <div class="container">
-                <div class="mry-filter mry-mb-40 mry-fo">
-                    <a href="#" data-filter="GODS" class="mry-card-category mry-default-link mry-current mry-gods">GODS</a>
-                    <a href="#" data-filter="WARRIORS" class="mry-card-category mry-default-link">WARRIORS</a>
-                </div>
-                <div class="mry-content">
-                    <div class="gods-content">
-                      <div class="parent-container" >
-                        <div class="banner-container" id="godsa"></div>
-                        <div class="banner-containerh" id="godsb"></div>
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="text-center col-xl-8">
-                          <div class="mry-numbering">
-                            <div class="mry-subtitlew">GODS</div>
-                          </div>
-                          <h3 class="mry-mb-40 mry-fo">
-                            Unleash the Power of Norse Gods in Polygöd 
-                          </h3>
-                          <p class="mry-text mry-fo">
-                            In the mystical realm of Polygöd, a grand saga unfolds as the divine powers of the Aesir and Vanir prepare for an epic battle. As the celestial convergence draws near, ten mighty deities, renowned as the most powerful beings across the Nine Worlds, are summoned to aid mortals in their quest for glory. Each of these godly characters possesses extraordinary abilities, destined to alter the course of the great war.
-        
-                          <p class="mry-text mry-fo">The Allfather Odin himself has a limited supply of these celestial warriors to 50, ensuring that only the most devoted and worthy champions may harness their divine might. With the aid of these gods, mortals shall carve their names into the annals of history, their feats forever etched in the ancient stones of Yggdrasil.
-        
-        <p class="mry-text mry-fo"> secure the favor of these divine beings, one must make a worthy offering. The cost of their allegiance varies from 100 pieces of gleaming gold to a staggering sum of 1,600, a price that only the most affluent and determined of mortals can afford. As the final battle of Ragnarok approaches, those who possess the divine might of these ten gods shall tip the balance of power and secure their place in the halls of Valhalla.
-                          </p>
-                        </div>
-                      </div>
-                        <a class="mry-btnw mry-default-linkw mry-anima-linkw " href="https://staking.polygod.io/"
-                        id="download-btn" > Enter Valhalla's Marketplace</a>         <style>
-                          #download-btn:hover {
-                            background-color: #ccc;
-                            color: #999;
-                            cursor: not-allowed;
-                          }
-                        </style>
-                      </div>
-
-                      <div class="mry-button-next mry-magnetic-link"></div>
-                    </div>
-                  </div>
-
-          <!-- gods content end -->
-
-          <div class="warriors-content" style="display:none;">
-          
-          
-          <!-- Warriros content -->
-                        </div>
-                      <div class="mry-button-next mry-magnetic-link"></div>
-                    </div>
-
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
 
-        <script>
-          $(document).ready(function () {
-              $("a[data-filter='GODS']").on("click", function (e) {
-                  e.preventDefault();
-                  $(".warriors-content").hide();
-                  $(".gods-content").show();
-              });
-      
-              $("a[data-filter='WARRIORS']").on("click", function (e) {
-                  e.preventDefault();
-                  $(".gods-content").hide();
-                  $(".warriors-content").show();
-              });
-          });
-      </script>
-      
-                        <!-- nft preview end -->
 
-    <!-- jquery js -->
-    <script src="js/plugins/jquery.min.js"></script>
-    <!-- tween max js -->
-    <script src="js/plugins/tween-max.min.js"></script>
-    <!-- scroll magic js -->
-    <script src="js/plugins/scroll-magic.js"></script>
-    <!-- scroll magic gsap plugin js -->
-    <script src="js/plugins/scroll-magic-gsap-plugin.js"></script>
-    <!-- swiper js -->
-    <script src="js/plugins/swiper.min.js"></script>
-    <!-- isotope js -->
-    <script src="js/plugins/isotope.min.js"></script>
-    <!-- fancybox js -->
-    <script src="js/plugins/fancybox.min.js"></script>
-    <!-- mapbox js -->
-    <script src="js/plugins/mapbox.min.js"></script>
-    <!-- smooth scrollbar js -->
-    <script src="js/plugins/smooth-scrollbar.min.js"></script>
-    <!-- overscroll js -->
-    <script src="js/plugins/overscroll.min.js"></script>
-    <!-- canvas js -->
-    <script src="js/plugins/canvas.js"></script>
-    <!-- parsley js -->
-    <script src="js/plugins/parsley.min.js"></script>
-    <!-- main js -->
-    <script src="js/main.js"></script>
-  </body>
+
+
+
+        <!-- portfolio -->
+
+        <div class="mry-portfolio mry-p-100-100">
+          <div class="container">
+            <div class="mry-filter mry-mb-40 mry-fo">
+              <a href="#" data-filter="GODS" class="mry-card-category mry-default-link mry-current mry-gods">GODS</a>
+              <a href="#" data-filter="WARRIORS" class="mry-card-category mry-default-link">WARRIORS</a>
+            </div>
+            <div class="mry-content">
+              <div class="gods-content">
+                <div class="parent-container">
+                  <div class="banner-container" id="godsa"></div>
+                  <div class="banner-containerh" id="godsb"></div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="text-center col-xl-8">
+                    <div class="mry-numbering">
+                      <div class="mry-subtitlew">GODS</div>
+                    </div>
+                    <h3 class="mry-mb-40 mry-fo">
+                      Unleash the Power of Norse Gods in Polygöd
+                    </h3>
+                    <p class="mry-text mry-fo">
+                      In the mystical realm of Polygöd, a grand saga unfolds as the divine powers of the Aesir and Vanir
+                      prepare for an epic battle. As the celestial convergence draws near, ten mighty deities, renowned
+                      as the most powerful beings across the Nine Worlds, are summoned to aid mortals in their quest for
+                      glory. Each of these godly characters possesses extraordinary abilities, destined to alter the
+                      course of the great war.
+                    </p>
+                    <p class="mry-text mry-fo">The Allfather Odin himself has a limited supply of these celestial
+                      warriors to 50, ensuring that only the most devoted and worthy champions may harness their divine
+                      might. With the aid of these gods, mortals shall carve their names into the annals of history,
+                      their feats forever etched in the ancient stones of Yggdrasil.
+                    </p>
+                    <p class="mry-text mry-fo"> secure the favor of these divine beings, one must make a worthy
+                      offering. The cost of their allegiance varies from 100 pieces of gleaming gold to a staggering sum
+                      of 1,600, a price that only the most affluent and determined of mortals can afford. As the final
+                      battle of Ragnarok approaches, those who possess the divine might of these ten gods shall tip the
+                      balance of power and secure their place in the halls of Valhalla.
+                    </p>
+                  </div>
+                </div>
+                <a class="mry-btnw mry-default-linkw mry-anima-linkw " href="https://staking.polygod.io/"
+                  id="download-btn"> Enter Valhalla's Marketplace</a>
+                <style>
+                  #download-btn:hover {
+                    background-color: #ccc;
+                    color: #999;
+                    cursor: not-allowed;
+                  }
+                </style>
+              </div>
+
+              <div class="mry-button-next mry-magnetic-link"></div>
+            </div>
+
+
+            <!-- gods content end -->
+
+
+            <div class="warriors-content" style="display:none;">
+              <div class="parent-container">
+                <div class="banner-container" id="godsa"></div>
+                <div class="banner-containerh" id="godsb"></div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="text-center col-xl-8">
+                  <div class="mry-numbering">
+                    <div class="mry-subtitlew">WARRIORS</div>
+                  </div>
+                  <h3 class="mry-mb-40 mry-fo">
+                    Unleash the Power of Norse Warriors in Polygöd
+                  </h3>
+                  <p class="mry-text mry-fo">
+                    In the mystical realm of Polygöd, a grand saga unfolds as the divine powers of the Aesir and Vanir
+                    prepare for an epic battle. As the celestial convergence draws near, ten mighty deities, renowned as
+                    the most powerful beings across the Nine Worlds, are summoned to aid mortals in their quest for
+                    glory. Each of these godly characters possesses extraordinary abilities, destined to alter the
+                    course of the great war.
+                  </p>
+                  <p class="mry-text mry-fo">
+                    The Allfather Odin himself has a limited supply of these celestial warriors to 50, ensuring that
+                    only the most devoted and worthy champions may harness their divine might. With the aid of these
+                    gods, mortals shall carve their names into the annals of history, their feats forever etched in the
+                    ancient stones of Yggdrasil.
+                  </p>
+                  <p class="mry-text mry-fo">
+                    secure the favor of these divine beings, one must make a worthy offering. The cost of their
+                    allegiance varies from 100 pieces of gleaming gold to a staggering sum of 1,600, a price that only
+                    the most affluent and determined of mortals can afford. As the final battle of Ragnarok approaches,
+                    those who possess the divine might of these ten gods shall tip the balance of power and secure their
+                    place in the halls of Valhalla.
+                  </p>
+                </div>
+              </div>
+              <a class="mry-btnw mry-default-linkw mry-anima-linkw" href="https://staking.polygod.io/"
+                id="download-btn">Enter Valhalla's Marketplace</a>
+              <style>
+                #download-btn:hover {
+                  background-color: #ccc;
+                  color: #999;
+                  cursor: not-allowed;
+                }
+              </style>
+              <div class="mry-button-next mry-magnetic-link"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <script>
+    $(document).ready(function () {
+      $("a[data-filter='GODS']").on("click", function (e) {
+        e.preventDefault();
+        $(".warriors-content").hide();
+        $(".gods-content").show();
+      });
+
+      $("a[data-filter='WARRIORS']").on("click", function (e) {
+        e.preventDefault();
+        $(".gods-content").hide();
+        $(".warriors-content").show();
+      });
+    });
+  </script>
+
+  <!-- nft preview end -->
+
+  <!-- jquery js -->
+  <script src="js/plugins/jquery.min.js"></script>
+  <!-- tween max js -->
+  <script src="js/plugins/tween-max.min.js"></script>
+  <!-- scroll magic js -->
+  <script src="js/plugins/scroll-magic.js"></script>
+  <!-- scroll magic gsap plugin js -->
+  <script src="js/plugins/scroll-magic-gsap-plugin.js"></script>
+  <!-- swiper js -->
+  <script src="js/plugins/swiper.min.js"></script>
+  <!-- isotope js -->
+  <script src="js/plugins/isotope.min.js"></script>
+  <!-- fancybox js -->
+  <script src="js/plugins/fancybox.min.js"></script>
+  <!-- mapbox js -->
+  <script src="js/plugins/mapbox.min.js"></script>
+  <!-- smooth scrollbar js -->
+  <script src="js/plugins/smooth-scrollbar.min.js"></script>
+  <!-- overscroll js -->
+  <script src="js/plugins/overscroll.min.js"></script>
+  <!-- canvas js -->
+  <script src="js/plugins/canvas.js"></script>
+  <!-- parsley js -->
+  <script src="js/plugins/parsley.min.js"></script>
+  <!-- main js -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
