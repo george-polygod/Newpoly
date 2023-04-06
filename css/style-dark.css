@@ -2931,4 +2931,25 @@ blockquote:after {
 		margin-left: 4%;
 		text-align: center !important;
 	}
+	/* Not found */
+	#notfound-img {
+		width: 500px !important;
+		height: 350px !important;
+		margin-top: 30%;
+		margin-left: -24%;
+	}
+	#notfound-title {
+		margin-top: 80% !important;
+		font-size:medium;
+	}
+	#notfound-text {
+		margin-top: 0% !important;
+		font-size:xx-small;
+		display: none !important;
+	}
+	#notfound-btn {
+		margin-top: 0% !important;
+		font-size: x-small;
+		margin-left: 20% !important;
+	}
 }
