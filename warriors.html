@@ -21,7 +21,16 @@
   <!-- main css -->
   <link rel="stylesheet" href="css/style-dark.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+  <script type="text/javascript">
+    // Prevent screen from rotating
+    window.addEventListener("orientationchange", function() {
+      if (window.orientation == 90 || window.orientation == -90) {
+        document.body.style.transform = "rotate(0deg)";
+        alert("Please rotate your device back to portrait mode.");
+      }
+    });
+  </script>
+<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
   <title>Warriros</title>
 
 </head>
