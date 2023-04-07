@@ -1646,14 +1646,6 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	overflow: hidden;
 }
 
-/* parallax warriors horizantal image */
-/* .warriors-container {
-	position: relative;
-	height: 70vh; 
-	overflow: hidden;
-	overflow-x: hidden !important; 
-  }
-   */
 
 .banner-container-w {
 	position: fixed;
@@ -1662,7 +1654,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	height: 338px;
 	z-index: 9999;
 	pointer-events: none;
-	background-image: url(/img/dark/projects/prjct-1/Page-parallax.png);
+	background-image: url(/img/dark/projects/prjct-1/warriors-parallax.png);
 	background-repeat: repeat-x;
 	background-size: 4143px 263px;
 	background-position: 0px 50%;
@@ -1688,7 +1680,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	height: 338px;
 	z-index: 9999;
 	pointer-events: none;
-	background-image: url(/img/dark/projects/prjct-1/Page-parallax.png);
+	background-image: url(/img/dark/projects/prjct-1/warriors-parallax.png);
 	background-repeat: repeat-x;
 	background-size: 4143px 263px;
 	background-position: 0px 50%;
