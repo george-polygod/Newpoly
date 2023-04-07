@@ -1658,7 +1658,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	background-repeat: repeat-x;
 	background-size: 4143px 263px;
 	background-position: 0px 50%;
-	animation: move-banner-w 120s linear 0s infinite normal none running;
+	animation: move-banner-w 120s linear 0s infinite reverse none running;
 	transform: rotate(-2deg);
 	width: 99.7% !important;
 }
@@ -1684,7 +1684,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	background-repeat: repeat-x;
 	background-size: 4143px 263px;
 	background-position: 0px 50%;
-	animation: move-banner-ww 120s linear 0s infinite reverse none running;
+	animation: move-banner-ww 120s linear 0s infinite normal none running;
 	transform: rotate(-2deg);
 	width: 99.7% !important;
 }
@@ -2855,10 +2855,14 @@ blockquote:after {
 	}
 
 	#download-btn {
-		margin-left: 33%;
+		margin-left: 32%;
 		text-align: center;
 
 	}
+	#warriors-btn {
+		margin-left: 21% !important;
+		text-align: center !important;
+		}
 }
 	@media only screen and (max-device-width: 800px),
 		(max-width: 800px) {
