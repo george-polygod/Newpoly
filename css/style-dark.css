@@ -3046,4 +3046,31 @@ blockquote:after {
 					padding: 0;
 					overflow: hidden !important;
 				  }
+
+				  .title-container {
+					margin: 0 auto;
+					width: 80%;
+					text-align: center;
+					margin-top: 15% !important;
+					z-index: 1 !important;
+				}
+
+				  .content-container {
+					margin: 0 auto;
+					width: 95% !important;
+					margin-top: -4% !important;
+					margin-left: 2% !important;
+					z-index: 1 !important;
+				  }
+					.button-container {
+						text-align: center;
+						margin-top: 190% !important;
+			  
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+
+					}
+					
 			}
