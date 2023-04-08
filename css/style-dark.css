@@ -2796,7 +2796,14 @@ blockquote:after {
 	animation: checkmark-circle 0.6s ease-in-out backwards
 }
 
+/* Game details */
+#game-title {
+	margin-top: -60%;
+}
 
+#game-text {
+	margin-top: 30%;
+}
 
 
  @media only screen and (max-device-width: 1100px),
@@ -3027,4 +3034,16 @@ blockquote:after {
 					font-size: x-small;
 					margin-left: 20% !important;
 				}
+
+				#game {
+					object-fit: cover;
+					height: 100vh !important;
+					width: 100vw !important;
+					border: none;
+					margin-left:-20% !important;
+					margin-top: -11% !important;
+					margin: 0;
+					padding: 0;
+					overflow: hidden !important;
+				  }
 			}
