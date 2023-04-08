@@ -2806,8 +2806,8 @@ blockquote:after {
 }
 
 
- @media only screen and (max-device-width: 1100px),
-(max-width: 1100px) { 
+ @media only screen and (max-device-width: 1599px),
+(max-width: 1599px) { 
 
 	/* styles for devices with a screen width of 390 pixels or smaller, 
 	   including the iPhone 12 Pro, and browser windows with a width of 390 pixels or smaller */
@@ -2870,7 +2870,49 @@ blockquote:after {
 		margin-left: 21% !important;
 		text-align: center !important;
 		}
-}
+	
+	/* game page */
+	#game {
+		object-fit: cover;
+		height: 110vh !important;
+		width: 100vw !important;
+		border: none;
+		margin-left:-20% !important;
+		margin-top: -11% !important;
+		margin: 0;
+		padding: 0;
+		overflow: auto !important;
+		overflow-y: scroll !important; 
+	  }
+
+	  .title-container {
+		margin: 0 auto;
+		width: 80%;
+		text-align: center;
+		margin-top: 15% !important;
+		z-index: 1 !important;
+	}
+
+	  .content-container {
+		margin: 0 auto;
+		width: 95% !important;
+font-size: small;
+		margin-top: -4% !important;
+		margin-left: 2% !important;
+		z-index: 1 !important;
+	  }
+
+	  .button-container {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		position: fixed !important;
+		bottom: -30%;
+		left: 40% !important;
+		transform: translateX(-50%);
+		z-index: 9999;
+	  }
+ }
 	@media only screen and (max-device-width: 800px),
 		(max-width: 800px) {
 
@@ -2939,9 +2981,76 @@ blockquote:after {
 		margin-left: 11% !important;
 		text-align: center !important;
 		}
-		
+	/* game page */
+		#game {
+			object-fit: cover;
+			height: 110vh !important;
+			width: 100vw !important;
+			border: none;
+			margin-left:-20% !important;
+			margin-top: -11% !important;
+			margin: 0;
+			padding: 0;
+			overflow: auto !important;
+			overflow-y: scroll !important; 
+		  }
+
+		  .title-container {
+			margin: 0 auto;
+			width: 80%;
+			text-align: center;
+			margin-top: 15% !important;
+			z-index: 1 !important;
 		}
 
+		  .content-container {
+			margin: 0 auto;
+			width: 95% !important;
+font-size: small;
+			margin-top: -4% !important;
+			margin-left: 2% !important;
+			z-index: 1 !important;
+		  }
+		
+	/* game page */
+		#game {
+			object-fit: cover;
+			height: 110vh !important;
+			width: 100vw !important;
+			border: none;
+			margin-left:-20% !important;
+			margin-top: -11% !important;
+			margin: 0;
+			padding: 0;
+			overflow: auto !important;
+			overflow-y: scroll !important; 
+		  }
+
+		  .title-container {
+			margin: 0 auto;
+			width: 80%;
+			text-align: center;
+			margin-top: 15% !important;
+			z-index: 1 !important;
+		}
+
+		  .content-container {
+			margin: 0 auto;
+			width: 95% !important;
+font-size: small;
+			margin-top: -4% !important;
+			margin-left: 2% !important;
+			z-index: 1 !important;
+		  }
+		  .button-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+margin-top: 100% !important;
+margin-left: -35% !important;
+		  }
+		}
 		@media only screen and (max-device-width: 500px),
 		(max-width: 500px) {
 				/* styles for devices with a screen width of 390 pixels or smaller, 
@@ -3035,16 +3144,19 @@ blockquote:after {
 					margin-left: 20% !important;
 				}
 
+				/* game page */
+
 				#game {
 					object-fit: cover;
-					height: 100vh !important;
+					height: 110vh !important;
 					width: 100vw !important;
 					border: none;
 					margin-left:-20% !important;
 					margin-top: -11% !important;
 					margin: 0;
 					padding: 0;
-	
+					overflow: auto !important;
+					overflow-y: scroll !important; 
 				  }
 
 				  .title-container {
@@ -3058,13 +3170,14 @@ blockquote:after {
 				  .content-container {
 					margin: 0 auto;
 					width: 95% !important;
+font-size: small;
 					margin-top: -4% !important;
 					margin-left: 2% !important;
 					z-index: 1 !important;
 				  }
 					.button-container {
 						text-align: center;
-						margin-top: 190% !important;
+						margin-top: 153% !important;
 			  
 						position: absolute;
 						top: 0;
@@ -3072,5 +3185,6 @@ blockquote:after {
 						right: 0;
 
 					}
+				
 					
 			}
