@@ -342,35 +342,76 @@
                           <div class="mry-text mry-mb-30">
                             Polygod, a creation of divine proportions, is currently undergoing the trials of<br /> closed beta testing before it is unleashed upon the world in its full magnificence.
                           </div>
-                          <a class="mry-btn mry-default-link mry-anima-link" href="https://store.epicgames.com/en-US/p/polygod-1dde08" id="download-btn">Available - April 17th</a> 
-                          <button id="get-key-button">Get Key</button>
+                          <!-- START OF GET A CODE -->
+                          <a class="mry-btn mry-default-link mry-anima-link" href="#" id="download-btn">Get Access Code</a> 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://apis.google.com/js/api.js"></script>
-
-<script>
-  gapi.load('client:auth2', {
-    clientId: '1052105511090-fkqbsh3fbpr4o07mi34c2ns155eh7sug.apps.googleusercontent.com'
-  });
-
-  document.getElementById("get-key-button").addEventListener("click", function() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://script.google.com/macros/s/AKfycbwytG12MH5cN6w2D9WxrK9_OWg8c5A0sHiqRiN5cvSYIBnUmgAy1jcanT04RkJY8pFy/exec");
-    xhr.send();
-    xhr.onload = function() {
-      var key = xhr.responseText; // get the key value
-      Swal.fire({
-        title: "Congratulation",
-        text: "The key is: " + key, // show the key in the sweetalert message
-        icon: "success",
-        confirmButtonText: "Close",
-      });
-    };
-  });
-</script>
+                          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                          <script src="https://apis.google.com/js/api.js"></script>
+                          
+                          <script>
+                            gapi.load('client:auth2', {
+                              clientId: '1052105511090-fkqbsh3fbpr4o07mi34c2ns155eh7sug.apps.googleusercontent.com'
+                            });
+                          
+                            document.getElementById("download-btn").addEventListener("click", function() {
+                              // Check if the "access_granted" cookie exists
+                              var accessGranted = getCookie("access_granted");
+                              if (accessGranted) {
+                                Swal.fire({
+                                  title: "Error",
+                                  text: "Access already granted",
+                                  icon: "error",
+                                  confirmButtonText: "Close",
+                                });
+                                return; // exit the function
+                              }
+                              
+                              // If the "access_granted" cookie doesn't exist, make the request to get the access code
+                              var xhr = new XMLHttpRequest();
+                              xhr.open("GET", "https://script.google.com/macros/s/AKfycbwytG12MH5cN6w2D9WxrK9_OWg8c5A0sHiqRiN5cvSYIBnUmgAy1jcanT04RkJY8pFy/exec");
+                              xhr.send();
+                              xhr.onload = function() {
+                                var key = xhr.responseText; // get the key value
+                                
+                                // Set the "access_granted" cookie to prevent further requests
+                                setCookie("access_granted", "true", 1);
+                                
+                                Swal.fire({
+                                  title: "Congratulation",
+                                  text: "The key is: " + key, // show the key in the sweetalert message
+                                  icon: "success",
+                                  confirmButtonText: "Close",
+                                });
+                              };
+                            });
+                          
+                            // Helper function to set a cookie
+                            function setCookie(name, value, days) {
+                              var expires = "";
+                              if (days) {
+                                var date = new Date();
+                                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                                expires = "; expires=" + date.toUTCString();
+                              }
+                              document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+                            }
+                          
+                            // Helper function to get a cookie by name
+                            function getCookie(name) {
+                              var nameEQ = name + "=";
+                              var ca = document.cookie.split(';');
+                              for(var i=0;i < ca.length;i++) {
+                                  var c = ca[i];
+                                  while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                                  if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                              }
+                              return null;
+                            }
+                          </script>
+                          
 
                           
-                          
+                          <!-- END OF GET A CODE -->
                           
                           
                           <style>
