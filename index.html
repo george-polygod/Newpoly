@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/style-dark.css" />
 
     <script type="text/javascript">
+     
+
       // Prevent screen from rotating
       window.addEventListener("orientationchange", function() {
         if (window.orientation == 90 || window.orientation == -90) {
@@ -34,6 +36,7 @@
     <title>polygod</title>
   </head>
   <body>
+   
     <div class="mry-app">
       <!-- preloader -->
       <div class="mry-preloader mry-active">
@@ -339,7 +342,28 @@
                             Polygod, a creation of divine proportions, is currently undergoing the trials of<br /> closed beta testing before it is unleashed upon the world in its full magnificence.
                           </div>
                           <a class="mry-btn mry-default-link mry-anima-link" href="https://store.epicgames.com/en-US/p/polygod-1dde08" id="download-btn">Available - April 17th</a> 
+                          <button id="get-key-button">Get Key</button>
 
+                          <script src="https://apis.google.com/js/api.js"></script>
+                          
+                          <script>
+                            gapi.load('client:auth2', {
+                              clientId: '1052105511090-fkqbsh3fbpr4o07mi34c2ns155eh7sug.apps.googleusercontent.com'
+                            });
+                          
+                            document.getElementById("get-key-button").addEventListener("click", function() {
+                              var xhr = new XMLHttpRequest();
+                              xhr.open("GET", "https://script.google.com/macros/s/AKfycbyqM3CpYChQwsgQ5gxJ8-TkEsao06eWTf3vAbDcdTR3r_tyD7nGWm5glDjCMYDxhF-O_g/exec");
+                              xhr.send();
+                              xhr.onload = function() {
+                                alert(xhr.responseText);
+                              };
+                            });
+                          </script>
+                          
+                          
+                          
+                          
                           <style>
                             #download-btn:hover {
                               background-color: #cccccc00;
