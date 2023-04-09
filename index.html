@@ -20,6 +20,7 @@
     <link href="css/plugins/mapbox-style.css" rel="stylesheet" />
     <!-- main css -->
     <link rel="stylesheet" href="css/style-dark.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script type="text/javascript">
      
@@ -344,22 +345,30 @@
                           <a class="mry-btn mry-default-link mry-anima-link" href="https://store.epicgames.com/en-US/p/polygod-1dde08" id="download-btn">Available - April 17th</a> 
                           <button id="get-key-button">Get Key</button>
 
-                          <script src="https://apis.google.com/js/api.js"></script>
-                          
-                          <script>
-                            gapi.load('client:auth2', {
-                              clientId: '1052105511090-fkqbsh3fbpr4o07mi34c2ns155eh7sug.apps.googleusercontent.com'
-                            });
-                          
-                            document.getElementById("get-key-button").addEventListener("click", function() {
-                              var xhr = new XMLHttpRequest();
-                              xhr.open("GET", "https://script.google.com/macros/s/AKfycbyqM3CpYChQwsgQ5gxJ8-TkEsao06eWTf3vAbDcdTR3r_tyD7nGWm5glDjCMYDxhF-O_g/exec");
-                              xhr.send();
-                              xhr.onload = function() {
-                                alert(xhr.responseText);
-                              };
-                            });
-                          </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+
+<script>
+  gapi.load('client:auth2', {
+    clientId: '1052105511090-fkqbsh3fbpr4o07mi34c2ns155eh7sug.apps.googleusercontent.com'
+  });
+
+  document.getElementById("get-key-button").addEventListener("click", function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://script.google.com/macros/s/AKfycbwytG12MH5cN6w2D9WxrK9_OWg8c5A0sHiqRiN5cvSYIBnUmgAy1jcanT04RkJY8pFy/exec");
+    xhr.send();
+    xhr.onload = function() {
+      var key = xhr.responseText; // get the key value
+      Swal.fire({
+        title: "Congratulation",
+        text: "The key is: " + key, // show the key in the sweetalert message
+        icon: "success",
+        confirmButtonText: "Close",
+      });
+    };
+  });
+</script>
+
                           
                           
                           
