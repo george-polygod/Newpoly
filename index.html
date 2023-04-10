@@ -21,7 +21,6 @@
     <!-- main css -->
     <link rel="stylesheet" href="css/style-dark.css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
     <script type="text/javascript">
      
 
@@ -342,17 +341,22 @@
                           <div class="mry-text mry-mb-30">
                             Polygod, a creation of divine proportions, is currently undergoing the trials of<br /> closed beta testing before it is unleashed upon the world in its full magnificence.
                           </div>
+   
                           <!-- START OF GET A CODE -->
+                    
+                          
                           <a class="mry-btn mry-default-link mry-anima-link" href="#" id="download-btn">Get Access Code</a> 
 
                           <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                           <script src="https://apis.google.com/js/api.js"></script>
-                          
+     
+<script src="client_id.js"></script> 
                           <script>
-                            gapi.load('client:auth2', {
-                              clientId: '1052105511090-fkqbsh3fbpr4o07mi34c2ns155eh7sug.apps.googleusercontent.com'
-                            });
-                          
+                             gapi.load('client:auth2', {
+    clientId: CLIENT_ID, 
+  });
+
+                   
                             document.getElementById("download-btn").addEventListener("click", function() {
                               // Check if the "access_granted" cookie exists
                               var accessGranted = getCookie("access_granted");
