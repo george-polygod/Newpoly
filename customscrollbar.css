@@ -1,0 +1,30 @@
+/* styles.css */
+@layer utilities {
+    @scrollbar {
+      &-thumb {
+        @apply bg-red-500;
+      }
+      &-track {
+        @apply bg-red-200;
+      }
+    }
+  }
+  
+ /* customscrollbar.css */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #DC2626 #F87171;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0.5rem !important;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #F87171 !important;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #DC2626 !important;
+  }
+  
