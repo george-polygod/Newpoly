@@ -3170,7 +3170,7 @@ margin-left: -35% !important;
 				  .content-container {
 					margin: 0 auto;
 					width: 95% !important;
-font-size: small;
+					font-size: small;
 					margin-top: -4% !important;
 					margin-left: 2% !important;
 					z-index: 1 !important;
@@ -3185,6 +3185,10 @@ font-size: small;
 						right: 0;
 
 					}
-				
+					.flexco-cont {
+						width: 100% !important; /* Adjust this value to increase or decrease the width of the text block on mobile devices */
+						margin-left: auto;
+						margin-right: auto;
+					  }
 					
 			}
