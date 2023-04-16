@@ -2804,7 +2804,24 @@ blockquote:after {
 #game-text {
 	margin-top: 30%;
 }
-
+/* Privacy Policy page */
+.mry-bullet::before {
+	content: "• ";
+  }
+  
+  .flexo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+  }
+  
+  .flexco-cont {
+	width: 40%; /* Adjust this value for desktop width */
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
 
  @media only screen and (max-device-width: 1599px),
 (max-width: 1599px) { 
@@ -3185,10 +3202,11 @@ margin-left: -35% !important;
 						right: 0;
 
 					}
+					/* Privacy Policy page */
 					.flexco-cont {
-						width: 100% !important; /* Adjust this value to increase or decrease the width of the text block on mobile devices */
-						margin-left: auto;
-						margin-right: auto;
+						width: 100%;
+						margin-left: auto !important;
+						margin-right: auto !important; 
 					  }
 					
 			}
