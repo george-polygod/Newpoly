@@ -6,6 +6,14 @@
       "destination": "/404.html"
     },
     {
+      "source": "/:path+/index",
+      "destination": "/:path+/index.html"
+    },
+    {
+      "source": "/:path+/",
+      "destination": "/:path+/index.html"
+    },
+    {
       "source": "/:path+",
       "destination": "/:path+.html"
     }
