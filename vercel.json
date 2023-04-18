@@ -1,9 +1,18 @@
 {
-    "routes": [
-      {
-        "src": "/404",
-        "dest": "/404.html"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/404",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/:path+",
+      "has": [
+        {
+          "type": "file",
+          "key": ":path.html"
+        }
+      ],
+      "destination": "/:path+.html"
+    }
+  ]
+}
