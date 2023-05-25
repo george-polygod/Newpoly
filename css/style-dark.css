@@ -63,6 +63,50 @@ Author URL: https://themeforest.net/user/ultimatewebsolutions/
 
 /* Full screen style */
 
+
+.announcement-box {
+    width: 1200px;
+    height: 65px;
+    margin-left: 15%;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.795);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    z-index: 1 !important;
+    animation: shadow-pulse 2s infinite;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 4px 6px rgba(255, 0, 0, 0.795);
+    }
+    100% {
+        box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+    }
+}
+
+.announcement-box a {
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 1180px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: filter 0.3s;
+}
+
 #full-video {
 	position: relative;
 }
