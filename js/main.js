@@ -795,38 +795,40 @@
 
 	// Replace 'YOUR_BOT_TOKEN' with your Telegram Bot API token.
 	// Replace 'YOUR_CHAT_ID' with the Telegram channel's chat ID.
-	const telegramUrl = "https://api.telegram.org/bot6001872564:AAEc10MeHXUinnYOSnHImAECYxfMtdJURYk/getUpdates?chat_id=1001726521397";
+	// const telegramUrl = "https://api.telegram.org/bot6001872564:AAEc10MeHXUinnYOSnHImAECYxfMtdJURYk/getUpdates?chat_id=1001726521397";
 	
-	function hasMedia(update) {
-        const mediaTypes = ['photo', 'video', 'animation', 'document', 'sticker', 'audio', 'voice'];
-        return mediaTypes.some(type => update.channel_post.hasOwnProperty(type));
-    }
-	    // Add click event listener to the announcement box
-		announcementBox.addEventListener("click", () => {
-			window.open("https://t.me/PolygodAnnouncement");
-		});
+	// function hasMedia(update) {
+    //     const mediaTypes = ['photo', 'video', 'animation', 'document', 'sticker', 'audio', 'voice'];
+    //     return mediaTypes.some(type => update.channel_post.hasOwnProperty(type));
+    // }
+	//     // Add click event listener to the announcement box
+	// 	announcementBox.addEventListener("click", () => {
+	// 		window.open("https://t.me/PolygodAnnouncement");
+	// 	});
 		
-    fetch(telegramUrl)
-        .then(response => response.json())
-        .then(data => {
-            const updates = data.result;
-            const latestUpdate = updates[updates.length - 1];
-
-            let announcementText = latestUpdate.channel_post.text || '';
-
-            if (hasMedia(latestUpdate)) {
-                const caption = latestUpdate.channel_post.caption;
-                if (caption) {
-                    announcementText += ` ${caption}`;
-                }
-            }
-
-            announcementElement.textContent = announcementText;
-        })
-        .catch(error => {
-            console.error("Error fetching Telegram channel data:", error);
-            announcementElement.textContent = "Error fetching latest announcement.";
-        });
+	// 	fetch(telegramUrl)
+	// 	.then(response => response.json())
+	// 	.then(data => {
+	// 		const updates = data.result;
+	// 		const latestUpdate = updates[updates.length - 1];
+	
+	// 		let announcementText = latestUpdate.channel_post.text || '';
+	
+	// 		if (hasMedia(latestUpdate)) {
+	// 			const caption = latestUpdate.channel_post.caption;
+	// 			if (caption) {
+	// 				announcementText += ` ${caption}`;
+	// 			}
+	// 		}
+	
+	// 		// Create a hyperlink and embed it directly using innerHTML
+	// 		announcementElement.innerHTML = `<a href='https://t.me/PolygodAnnouncement'>${announcementText}</a>`;
+	// 	})
+	// 	.catch(error => {
+	// 		console.error("Error fetching Telegram channel data:", error);
+	// 		announcementElement.innerHTML = "<a href='https://t.me/PolygodAnnouncement'>POLYGOD IS NOW LIVE ON EPIC STORE</a>";
+	// 	});
 
 
 })();
+
